@@ -2,8 +2,34 @@
 <html>
 <head>
 	<title>max_vasyuk personal site</title>
+	<meta charset="utf-8">
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/granim/1.1.1/granim.min.js'></script>
+	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-	<h1>скоро здесь будет что-то грандиозное!</h1>
+	<div id="canvas-wrap">
+  		<canvas id="canvas-basic"></canvas>
+  		<div id="overlay">
+  			<!-- <div id="inner">test</div> -->
+  		</div>
+	</div>
+	<script type="text/javascript">
+		var granimInstance = new Granim({
+		element: '#canvas-basic',
+		name: 'basic-gradient',
+		direction: 'diagonal',
+		opacity: [1, 1],
+		isPausedWhenNotInView: true,
+		states : {
+			"default-state": {
+				gradients: [
+					['#1967c3', '#4a90e2'],
+					['#02AAB0', '#00CDAC']
+				]
+			}
+		}
+		});
+	</script>
 </body>
 </html>
